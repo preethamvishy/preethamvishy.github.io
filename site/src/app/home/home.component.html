@@ -1,7 +1,7 @@
 <section class="jumbotron text-center">
     <div class="container">
         <h1 class="jumbotron-heading">Preetham Viswanathan</h1>
-        <p class="lead text-muted">Full-time graduate student at Northeastern Univerisity. Full stack development
+        <p class="lead text-muted">Full-time graduate student at Northeastern Univerisity.<br />Full stack development
             enthusiast.</p>
         <p class="links">
             <a [href]="github" class="text-secondary"><i class="fab fa-github"></i></a>
@@ -11,12 +11,14 @@
     </div>
 </section>
 
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <span class="display-4">Projects</span>
+</div>
 <div class="album py-5 bg-light">
     <div class="container">
         <div class="row">
             <div *ngFor="let item of data" class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <span>
                             {{item.title}}
@@ -30,6 +32,11 @@
                     <img class="card-img-top" [src]="item.image">
                     <div class="card-body">
                         <p class="card-text">{{item.description}}</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <button *ngFor="let t of item.tech" type="button" class="btn" [ngClass]="selected[camelize(t)] ? 'btn-success': 'btn-outline-secondary'" (click)="tag(camelize(t))">
+                            {{t}}
+                        </button>
                     </div>
                 </div>
             </div>
