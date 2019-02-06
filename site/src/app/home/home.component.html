@@ -34,7 +34,7 @@
                         <p class="card-text">{{item.description}}</p>
                     </div>
                     <div class="card-footer text-muted">
-                        <button *ngFor="let t of item.tech" type="button" class="btn" [ngClass]="selected[camelize(t)] ? 'btn-success': 'btn-outline-secondary'" (click)="tag(camelize(t))">
+                        <button *ngFor="let t of item.tech" type="button" class="btn" [ngClass]="selected[camelize(t)] ? 'btn-secondary': 'btn-outline-secondary'" (click)="tag(camelize(t))">
                             {{t}}
                         </button>
                     </div>
