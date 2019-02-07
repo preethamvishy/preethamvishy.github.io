@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit {
       image: 'https://camo.githubusercontent.com/ee0b9aabfb0af29f60868f8eb35013fdbf8ff937/68747470733a2f2f692e696d6775722e636f6d2f675147457a754e2e6a7067',
       github: 'https://github.com/preethamvishy/instalytics',
       live: 'https://www.npmjs.com/package/instalytics',
-      description: 'Instagram analytics as an open-source project dependency.',
+      description: `Instagram analytics as an open-source project dependency (deprecated due to change in Instagram's public Graph API).`,
       tech: ['Node.js', 'npm']
     },
     {
