@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Exo+2:100|Roboto:100');
+
 .jumbotron-heading {
     font-family: 'Roboto', sans-serif;
     // text-transform: uppercase;
@@ -33,4 +34,25 @@ img {
     font-size: 0.8rem;
     margin: 5px;
     font-family: 'Roboto', sans-serif;
+}
+
+.btn i {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+@media (min-width: 34em) {
+    .card-columns {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media (min-width: 62em) {
+    .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
 }
