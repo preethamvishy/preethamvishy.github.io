@@ -7,6 +7,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { GoogleAnalyticsModule, GA_TOKEN } from 'angular-ga';
 
 import { APP_ROUTES } from './app.routes';
 
@@ -22,7 +23,9 @@ import { APP_ROUTES } from './app.routes';
     HttpClientModule,
     APP_ROUTES,
   ],
-  providers: [],
+  providers: [
+    { provide: GA_TOKEN, useValue: 'UA-50825364-8' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

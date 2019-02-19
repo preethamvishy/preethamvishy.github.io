@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 import * as _ from "lodash";
 
 @Component({
@@ -11,26 +12,26 @@ export class HomeComponent implements OnInit {
   data = [
     {
       title: 'Socialytics',
-      image: 'https://camo.githubusercontent.com/ee0b9aabfb0af29f60868f8eb35013fdbf8ff937/68747470733a2f2f692e696d6775722e636f6d2f675147457a754e2e6a7067',
+      images: ['https://snag.gy/SNGiCc.jpg', 'https://snag.gy/EkaDTo.jpg'],
       github: 'https://github.com/preethamvishy/socialytics',
       live: 'https://preethamvishy.github.io/socialytics/instagram?user=instagram',
-      description: `Quick, actionable Instagram analytics in under 10 seconds using Instagram's public data. 🚀`,
-      tech: ['Angular', 'Node.js', 'Bootstrap', 'HTML', 'CSS']
+      description: `Quick, actionable Instagram analytics in under 10 seconds using Instagram's public data.  🚀`,
+      tech: ['Angular', 'Node.js', 'Bootstrap', 'HTML', 'CSS', 'jQuery', 'JSON']
     },
     {
       title: 'Try CLI',
       image: 'https://camo.githubusercontent.com/b4623c1474231db8931288bc2c8347d74939992b/68747470733a2f2f692e696d6775722e636f6d2f324b455747764b2e706e67',
       github: 'https://github.com/preethamvishy/try',
       live: 'https://npmjs.com/package/try-cli',
-      description: 'A command line tool to attempt execution of a shell command and retry on schedule until it succeeds. Optionally, repeat the execution on schedule even if it succeeds. 🔁',
+      description: 'A command line tool to attempt execution of a shell command and retry on schedule until it succeeds. Optionally, repeat the execution on schedule even if it succeeds.  🔁',
       tech: ['Node.js', 'CLI']
     },
     {
       title: 'Porfolio',
-      image: 'https://snag.gy/0Rr5oT.jpg',
+      image: 'https://snag.gy/ZJGDBI.jpg',
       github: 'https://github.com/preethamvishy/preethamvishy.github.io',
       live: 'https://preethamvishy.github.io/',
-      description: 'Portfolio hosted on Github Pages.',
+      description: 'A platform to share my work with the world to augment enriching conversations, receive constructive feedback and engage in a synergy of learning experiences.',
       tech: ['Angular', 'Bootstrap', 'HTML', 'CSS']
     },
     
@@ -44,19 +45,19 @@ export class HomeComponent implements OnInit {
     },
     {
       title: 'Cafenaut',
-      images: ['/assets/images/cafehome.png', '/assets/images/cafegal.png', '/assets/images/cafejobs.png'],
+      images: ['https://imgur.com/HaIiCyp.png', 'https://imgur.com/IVQlnY3.png', 'https://imgur.com/xs5BhX6.png'],
       github: 'https://github.com/preethamvishy/Cafenaut',
       live: 'https://preethamvishy.github.io/Cafenaut/index.html',
-      description: 'A simple static website made with HTML and CSS for an imaginary cafe',
+      description: 'A simple static website made with HTML and CSS for an imaginary cafe.',
       tech: ['HTML', 'CSS']
     },
     {
-      title: 'Live Twitter Sentiment Analysis',
-      image: 'https://snag.gy/Vju6cw.jpg',
-      github: 'https://github.com/preethamvishy/demo',
-      live: 'https://visualization-demo.herokuapp.com/',
-      description: 'A live searchable twitter sentiment analyzer.',
-      tech: ['Angular', 'Node.js', 'Bootstrap', 'HTML', 'CSS', 'Web Sockets', 'Twitter API', 'JSON']
+      title: 'Liver - a Twitter Sentiment Analyzer',
+      image: 'https://snag.gy/HJ5NvM.jpg',
+      github: 'https://github.com/preethamvishy/live-twitter-sentiment',
+      live: 'https://live-twitter-sentiment.herokuapp.com/',
+      description: 'A live searchable twitter sentiment analyzer using Web Sockets, Twitter Streaming API, Angular and Node.js.',
+      tech: ['Angular', 'Node.js', 'Bootstrap', 'HTML', 'CSS', 'Web Sockets', 'Twitter API', 'JSON', 'Heroku', 'Socket.io']
     },
   ];
 
@@ -68,6 +69,8 @@ export class HomeComponent implements OnInit {
 
   selected = {};
 
+  constructor(private sanitizer: DomSanitizer) {}
+  
   ngOnInit() {
   }
 

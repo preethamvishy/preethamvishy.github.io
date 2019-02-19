@@ -1,8 +1,7 @@
 <section class="jumbotron text-center">
     <div class="container">
-        <h1 class="jumbotron-heading">Preetham Viswanathan</h1>
-        <p class="lead text-muted">Full-time graduate student at Northeastern Univerisity.<br />Full stack development
-            enthusiast.</p>
+        <h1 class="jumbotron-heading">Hi, I'm Preetham Viswanathan.</h1>
+        <p class="lead text-muted">I'm a full-time graduate student at Northeastern Univerisity.<br />I'm a software engineering and web development enthusiast looking to positively influence the world.</p>
         <p class="links">
             <a [href]="github" class="text-secondary"><i class="fab fa-github"></i></a>
             <a [href]="linkedIn" class="text-secondary"><i class="fab fa-linkedin"></i></a>
@@ -71,7 +70,7 @@
 
     <div class="container">
         <div class="card-columns">
-            <div *ngFor="let item of data" class="card shadow-sm">
+            <div *ngFor="let item of data" class="card shadow">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <span>
                         {{item.title}}
@@ -83,12 +82,12 @@
                                     class="fas fa-angle-right"></i></small></button>
                     </div>
                 </div>
-                <img *ngIf="item.image != null" class="card-img-top" [src]="item.image">
+                <a [href]="item.live" target="_blank"><img *ngIf="item.image != null" class="card-img-top" [src]="item.image"></a>
 
                 <div *ngIf="item.images" [id]="camelize(item.images[0])" class="carousel slide carousel-fade" data-ride="carousel">
                     <div class="carousel-inner">
                         <div *ngFor="let carouselImg of item.images; let j=index" [ngClass]="j == 0 ? 'carousel-item active' : 'carousel-item'">
-                            <img class="d-block w-100" [src]="carouselImg">
+                            <a [href]="item.live" target="_blank"><img class="d-block w-100" [src]="carouselImg"></a>
                         </div>
                     </div>
                     <a class="carousel-control-prev" [href]="'#' + camelize(item.images[0])" role="button" data-slide="prev">

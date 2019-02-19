@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "angular-ga": "^1.0.0",
     "boom": "^7.3.0",
     "bootstrap": "^4.2.1",
     "core-js": "^2.4.1",
