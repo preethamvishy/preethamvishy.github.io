@@ -1,0 +1,29 @@
+
+$coral: #FF7A6C;
+$yellow: #FFDC7B;
+$gray: #84828E;
+$onyx: #373449;
+$rosegold: #ce8c91;
+$fuschia: #A24868;
+$white: #EDEDED;
+@import url('https://fonts.googleapis.com/css?family=Exo+2:100|Roboto:100');
+
+* {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 1000;
+}
+.primary {
+    background-color: $fuschia;
+}
+.accent{
+    background-color: $fuschia;
+}
+.text-header {
+    color: $fuschia;
+}
+mgl-timeline .mgl-timeline-line {
+    width: 2px;
+}
+.experience-wrapper {
+    background-color: $fuschia;
+}

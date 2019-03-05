@@ -1,0 +1,20 @@
+<div class="container-fluid experience-wrapper bg-light">
+    <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <span class="display-4 text-header" style="font-family: 'Exo 2', sans-serif;">Experience</span>
+    </div>
+    <mgl-timeline [toggle]="toggle" [alternate]="alternate" [side]="side">
+        <mgl-timeline-entry *ngFor="let item of items; let i = index;">
+            <mgl-timeline-entry-header class="justify-content-between align-items-center">
+                <div [innerHTML]="getText(item.header)"></div>
+            </mgl-timeline-entry-header>
+            <mgl-timeline-entry-content>
+                <div>
+                    <div [innerHTML]="getText(item.content)"></div>
+                </div>
+            </mgl-timeline-entry-content>
+            <mgl-timeline-entry-dot [class]="color ? 'primary' : 'accent'" [size]="size">
+            </mgl-timeline-entry-dot>
+            <!-- <mgl-timeline-entry-side></mgl-timeline-entry-side> -->
+        </mgl-timeline-entry>
+    </mgl-timeline>
+</div>
