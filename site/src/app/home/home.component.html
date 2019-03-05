@@ -1,43 +1,35 @@
-<section class="jumbotron text-center">
-    <div class="container">
-        <h1 class="jumbotron-heading">Hi, I'm Preetham Viswanathan.</h1>
-        <p class="lead text-muted">I'm a full-time graduate student at Northeastern Univerisity.<br />I'm a software engineering and web development enthusiast looking to positively influence the world.</p>
-        <p class="links">
-            <a [href]="github" class="text-secondary"><i class="fab fa-github"></i></a>
-            <a [href]="linkedIn" class="text-secondary"><i class="fab fa-linkedin"></i></a>
-            <a [href]="npm" class="text-secondary"><i class="fab fa-npm"></i></a>
-        </p>
+<div class="container-fluid home-wrapper">
+    <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <span class="display-4 text-light" style="font-family: 'Exo 2', sans-serif;">Projects</span>
     </div>
-</section>
-
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <span class="display-4">Projects</span>
-</div>
-
-<div class="album py-5 bg-light">
-    <!--   <div class="container">
-        <div class="row">
-
-            <div *ngFor="let item of data" class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-header d-flex justify-content-between align-items-center">
+    <div class="album py-5">
+        <div class="container">
+            <div class="card-columns">
+                <div *ngFor="let item of data" class="card shadow">
+                    <div class="card-header d-flex justify-content-between align-items-center"
+                        style="font-family: 'Exo 2', sans-serif;">
                         <span>
                             {{item.title}}
                         </span>
                         <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary" (click)="navigate(item.github)"><small>Code<i
+                            <button type="button" class="btn btn-sm btn-outline-secondary"
+                                [disabled]="item.github == null" (click)="navigate(item.github)"><small>Code<i
                                         class="fab fa-github"></i></small></button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary" (click)="navigate(item.live)"><small>Live<i
+                            <button type="button" class="btn btn-sm btn-outline-secondary"
+                                [disabled]="item.live == null" (click)="navigate(item.live)"><small>Live<i
                                         class="fas fa-angle-right"></i></small></button>
                         </div>
                     </div>
-                    <img *ngIf="item.image != null" class="card-img-top" [src]="item.image">
-
-                    <div *ngIf="item.images" [id]="camelize(item.images[0])" class="carousel slide carousel-fade"
+                    <img *ngIf="item.image != null" (click)="toggleModal(item)" class="card-img-top" [src]="item.image">
+                    <div *ngIf="item.image != null" class="w-100">
+                        <hr class="col-4" />
+                    </div>
+                    <div *ngIf="item.images" [id]="camelize(item.images[0])" class="carousel slide carousel-fade "
                         data-ride="carousel">
                         <div class="carousel-inner">
-                            <div *ngFor="let carouselImg of item.images; let j=index" [ngClass]="j == 0 ? 'carousel-item active' : 'carousel-item'">
-                                <img class="d-block w-100" [src]="carouselImg">
+                            <div *ngFor="let carouselImg of item.images; let j=index"
+                                [ngClass]="j == 0 ? 'carousel-item active' : 'carousel-item'">
+                                <img class="d-block w-100" (click)="toggleModal(item)" [src]="carouselImg">
                             </div>
                         </div>
                         <a class="carousel-control-prev" [href]="'#' + camelize(item.images[0])" role="button"
@@ -50,13 +42,17 @@
                             <span class="carousel-control-next-icon rimary" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
+                        <div class="w-100">
+                            <hr class="col-4" />
+                        </div>
                     </div>
 
                     <div class="card-body">
                         <p class="card-text">{{item.description}}</p>
                     </div>
-                    <div class="card-footer text-muted">
-                        <button *ngFor="let t of item.tech" type="button" class="btn" [ngClass]="selected[camelize(t)] ? 'btn-secondary': 'btn-outline-secondary'"
+                    <div class="card-footer">
+                        <button *ngFor="let t of item.tech" type="button" class="btn"
+                            [ngClass]="selected[camelize(t)] ? 'btn-success': 'btn-outline-secondary'"
                             (click)="tag(camelize(t))">
                             {{t}}
                         </button>
@@ -65,51 +61,50 @@
             </div>
         </div>
     </div>
-</div> -->
-    <!--  -->
-
-    <div class="container">
-        <div class="card-columns">
-            <div *ngFor="let item of data" class="card shadow">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                    <span>
-                        {{item.title}}
-                    </span>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary" (click)="navigate(item.github)"><small>Code<i
-                                    class="fab fa-github"></i></small></button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" (click)="navigate(item.live)"><small>Live<i
-                                    class="fas fa-angle-right"></i></small></button>
-                    </div>
-                </div>
-                <a [href]="item.live" target="_blank"><img *ngIf="item.image != null" class="card-img-top" [src]="item.image"></a>
-
-                <div *ngIf="item.images" [id]="camelize(item.images[0])" class="carousel slide carousel-fade" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div *ngFor="let carouselImg of item.images; let j=index" [ngClass]="j == 0 ? 'carousel-item active' : 'carousel-item'">
-                            <a [href]="item.live" target="_blank"><img class="d-block w-100" [src]="carouselImg"></a>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" [href]="'#' + camelize(item.images[0])" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" [href]="'#' + camelize(item.images[0])" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon rimary" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-
-                <div class="card-body">
-                    <p class="card-text">{{item.description}}</p>
-                </div>
-                <div class="card-footer text-muted">
-                    <button *ngFor="let t of item.tech" type="button" class="btn" [ngClass]="selected[camelize(t)] ? 'btn-success': 'btn-outline-secondary'"
-                        (click)="tag(camelize(t))">
-                        {{t}}
+</div>
+<div class="modal fade container-fluid" id="postExpand" tabindex="-1" role="dialog" aria-labelledby="postExpandTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <ng-container *ngIf="expandPost != null ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-secondary" id="postExpandTitle">{{expandPost.title}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                <div class="modal-body container">
+                    <img *ngIf="expandPost.image != null" class="card-img-top" [src]="expandPost.image">
+
+                    <div *ngIf="expandPost.images" [id]="camelize(expandPost.images[0]) + Modal"
+                        class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div *ngFor="let carouselImg of expandPost.images; let j=index"
+                                [ngClass]="j == 0 ? 'carousel-item active' : 'carousel-item'">
+                                <a><img class="d-block w-100" [src]="carouselImg"></a>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" [href]="'#' + camelize(expandPost.images[0]) + Modal"
+                            role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" [href]="'#' + camelize(expandPost.images[0]) + Modal"
+                            role="button" data-slide="next">
+                            <span class="carousel-control-next-icon rimary" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal"
+                        [disabled]="expandPost.github == null" (click)="navigate(expandPost.github)">View
+                        Code</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" [disabled]="expandPost.live == null"
+                        (click)="navigate(expandPost.live)">View Live
+                        Website</button>
+                </div>
             </div>
-        </div>
+        </ng-container>
     </div>
 </div>

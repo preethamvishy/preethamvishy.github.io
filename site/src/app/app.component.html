@@ -1,1 +1,31 @@
-<router-outlet></router-outlet>
+<section class="jumbotron text-center h-100">
+    <div class="container-fluid h-100">
+        <div class="row-fluid d-flex justify-content-center align-items-center h-100">
+            <div class="card col-lg-4 col-md-8 col-xs-8 intro-card shadow-lg">
+                <div class="card-img-top">
+                    <div class="card intro-header shadow-lg">
+                        <div class="card-body">
+                            <h1 class="jumbotron-heading">Hi, I'm Preetham Viswanathan.</h1>
+                        </div>
+                    </div>
+                </div>
+                <p class="lead text-muted">
+                    I'm a candidate for Master of Science at Northeastern Univerisity. I'm a software engineering and
+                    web
+                    development enthusiast looking to positively influence the
+                    world.
+                </p>
+                <p class="links">
+                    <a [href]="github" class="text-secondary"><i class="fab fa-github"></i></a>
+                    <a [href]="linkedIn" class="text-secondary"><i class="fab fa-linkedin"></i></a>
+                    <a [href]="npm" class="text-secondary"><i class="fab fa-npm"></i></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<particles style="opacity: 0.5" [params]="particleParams" [style]="particleStyle" [width]="width" [height]="height">
+</particles>
+<div class="scroll-indicator"></div>
+<app-home></app-home>
+<app-experience></app-experience>

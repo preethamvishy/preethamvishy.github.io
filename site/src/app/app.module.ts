@@ -8,19 +8,28 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { GoogleAnalyticsModule, GA_TOKEN } from 'angular-ga';
-
+import { ParticlesModule } from 'angular-particle';
+ 
 import { APP_ROUTES } from './app.routes';
+import { ExperienceComponent } from './experience/experience.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MglTimelineModule } from 'angular-mgl-timeline';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    ExperienceComponent,
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    ParticlesModule,
+    BrowserAnimationsModule,
+    MglTimelineModule,
     APP_ROUTES,
   ],
   providers: [

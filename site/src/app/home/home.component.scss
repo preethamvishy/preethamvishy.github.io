@@ -1,39 +1,29 @@
+
+$coral: #FF7A6C;
+$yellow: #FFDC7B;
+$gray: #84828E;
+$onyx: #373449;
+$rosegold: #CE8C91;
+$fuschia: #A24868;
+$white: #EDEDED;
 @import url('https://fonts.googleapis.com/css?family=Exo+2:100|Roboto:100');
 
-.jumbotron-heading {
-    font-family: 'Roboto', sans-serif;
-    // text-transform: uppercase;
-
-}
-.text-muted {
-    font-family: 'Exo 2', sans-serif;
-}
-.links {
-    font-size: 2em;
-    word-spacing: 2rem;
-    .fa-linkedin:hover {
-        transform: scale(1.1);
-        color: rgb(51, 118, 176);
-        transition: 0.4s all;
-    }
-    .fa-npm:hover {
-        transform: scale(1.1);
-        color: rgb(187, 68, 62);
-        transition: 0.4s all;
-    }
-    .fa-github:hover {
-        transform: scale(1.1);
-        transition: 0.4s all;
-    }
+.home-wrapper {
+    background-color: $fuschia;
 }
 img {
     padding: 10px;
 }
 
+.card-body {
+    padding-top: 0px;
+}
+
 .card-footer .btn {
     font-size: 0.8rem;
     margin: 5px;
-    font-family: 'Roboto', sans-serif;
+    // font-family: 'Roboto', sans-serif;
+    font-family: 'Exo 2', sans-serif;
 }
 
 .btn i {
@@ -41,6 +31,20 @@ img {
     margin-left: 5px;
 }
 
+.card {
+    display: inline-block;
+    -webkit-column-break-inside: avoid;
+    margin: 15px;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+.card-text {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 1000;
+}
 
 @media (min-width: 34em) {
     .card-columns {
@@ -58,10 +62,4 @@ img {
         column-count: 3;
         column-gap: 32px;
     }
-}
-
-.card {
-    display: inline-block;
-    -webkit-column-break-inside: avoid;
-    margin: 15px;
 }
