@@ -1,0 +1,75 @@
+
+$coral: #FF7A6C;
+$yellow: #FFDC7B;
+$gray: #84828E;
+$onyx: #373449;
+$rosegold: #ce8c91;
+$fuschia: #A24868;
+$white: #EDEDED;
+@import url('https://fonts.googleapis.com/css?family=Exo+2:100|Roboto:100');
+
+* {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 1000;
+}
+
+.text-header {
+    color: $fuschia;
+    margin: 2rem;
+}
+
+.primary {
+    background-color: rgb(230, 230, 230);
+}
+
+.card {
+    margin: 2rem;
+    padding: 1rem;
+}
+
+#contact input[type="text"],
+#contact input[type="email"], 
+#contact textarea {
+	width: 100%;
+    border :1px solid #CCC;
+    // border-radius: 5px;
+	background: #FFF;
+	// margin: 0 0 10px;
+	padding: 10px;
+}
+
+#contact textarea {
+	height: 100px;
+	max-width: 100%;
+    resize: none;
+}
+
+#contact button[type="submit"] {
+	cursor:pointer;
+    width:calc(100%);
+    border:none;
+    outline: none;
+    background: $fuschia;
+    border-radius: 4px;
+	color:#FFF;
+	// margin:0 0 5px;
+	padding:10px;
+	font-size:15px;
+}
+
+#contact input:focus, 
+#contact textarea:focus,
+select:focus {
+    transition: 0.4s;
+	outline:0;
+	border:1px solid $fuschia;
+}
+
+#contact button:focus {
+	outline:0;
+}
+
+.container-fluid.container-fluid {
+    padding:0;
+    margin:0;
+}

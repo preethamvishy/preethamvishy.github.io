@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
   particleStyle: object = {};
   particleParams: object = {};
   width: number = 100;
-  // height: number = 100;
+  height: number = 100;
   linkedIn = "https://www.linkedin.com/in/preetham-viswanathan/";
   github = "https://www.github.com/preethamvishy"
   npm = "https://www.npmjs.com/~preethamvishy"

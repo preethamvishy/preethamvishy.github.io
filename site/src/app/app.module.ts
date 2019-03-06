@@ -14,6 +14,7 @@ import { APP_ROUTES } from './app.routes';
 import { ExperienceComponent } from './experience/experience.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MglTimelineModule } from 'angular-mgl-timeline';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { MglTimelineModule } from 'angular-mgl-timeline';
     AppComponent,
     HomeComponent,
     ExperienceComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
