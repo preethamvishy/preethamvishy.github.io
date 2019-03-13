@@ -17,16 +17,8 @@ export class HomeComponent implements OnInit {
       image: 'https://snag.gy/SNGiCc.jpg',
       github: 'https://github.com/preethamvishy/socialytics',
       live: 'https://preethamvishy.github.io/socialytics/instagram?user=instagram',
-      description: `Quick, actionable Instagram analytics in under 10 seconds using Instagram's public data.  🚀 (currently under maintenance due to changes made by Instagram)`,
+      description: `Quick, actionable Instagram analytics in under 10 seconds using Instagram's public data.  🚀`,
       tech: ['Angular', 'Node.js', 'Bootstrap', 'HTML', 'CSS', 'jQuery', 'JSON', 'Responsive']
-    },
-    {
-      title: 'Try CLI',
-      image: 'https://camo.githubusercontent.com/b4623c1474231db8931288bc2c8347d74939992b/68747470733a2f2f692e696d6775722e636f6d2f324b455747764b2e706e67',
-      github: 'https://github.com/preethamvishy/try',
-      live: 'https://npmjs.com/package/try-cli',
-      description: 'A command line tool to attempt execution of a shell command and retry on schedule until it succeeds. Optionally, repeat the execution on schedule even if it succeeds ⌛️',
-      tech: ['Node.js', 'CLI']
     },
     {
       title: 'Flock',
@@ -37,20 +29,12 @@ export class HomeComponent implements OnInit {
       tech: ['Angular', 'Node.js', 'Bootstrap', 'HTML', 'CSS', 'JSON', 'Responsive']
     },
     {
-      title: 'Cafenaut',
-      images: ['https://snag.gy/rsnORK.jpg', 'https://snag.gy/l5pzjR.jpg'],
-      github: 'https://github.com/preethamvishy/Cafenaut',
-      live: 'https://preethamvishy.github.io/Cafenaut/index.html',
-      description: 'A fully responsive static website made with HTML and CSS for an imaginary cafe. ☕️',
-      tech: ['HTML', 'CSS']
-    },
-    {
-      title: 'Instalytics',
-      // image: 'https://camo.githubusercontent.com/ee0b9aabfb0af29f60868f8eb35013fdbf8ff937/68747470733a2f2f692e696d6775722e636f6d2f675147457a754e2e6a7067',
-      github: 'https://github.com/preethamvishy/instalytics',
-      live: 'https://www.npmjs.com/package/instalytics',
-      description: `Instagram analytics as an open-source project dependency (deprecated due to change in Instagram's public Graph API).`,
-      tech: ['Node.js', 'npm']
+      title: 'Try CLI',
+      image: 'https://camo.githubusercontent.com/b4623c1474231db8931288bc2c8347d74939992b/68747470733a2f2f692e696d6775722e636f6d2f324b455747764b2e706e67',
+      github: 'https://github.com/preethamvishy/try',
+      live: 'https://npmjs.com/package/try-cli',
+      description: 'A command line tool to attempt execution of a shell command and retry on schedule until it succeeds. Optionally, repeat the execution on schedule even if it succeeds ⌛️',
+      tech: ['Node.js', 'CLI', 'npm']
     },
     {
       title: 'Porfolio',
@@ -62,11 +46,35 @@ export class HomeComponent implements OnInit {
     },
     {
       title: 'Liver',
-      image: 'https://snag.gy/DcHZRj.jpg',
+      image: 'https://snag.gy/Bz5IC2.jpg',
       github: 'https://github.com/preethamvishy/live-twitter-sentiment',
       live: 'https://live-twitter-sentiment.herokuapp.com/',
       description: 'A live searchable twitter sentiment & tone analyzer using Web Sockets, Twitter Streaming API, Angular, Node.js and IBM Watson Tone Analyzer for NLP.',
       tech: ['Angular', 'Node.js', 'Bootstrap', 'HTML', 'CSS', 'Web Sockets', 'Twitter API', 'JSON', 'Heroku', 'Responsive', 'Socket.io', 'IBM Watson Tone Analyzer']
+    },
+    {
+      title: 'Instapro',
+      image: 'https://snag.gy/oRpmfX.jpg',
+      github: 'https://github.com/preethamvishy/instapro',
+      live: 'https://www.npmjs.com/package/instalytics',
+      description: `An open-source Node.js library to get public Instagram data without API keys or logging in.`,
+      tech: ['Node.js', 'npm', 'Cheerio', 'Web Scraping']
+    },
+    {
+      title: 'Cafenaut',
+      images: ['https://snag.gy/rsnORK.jpg', 'https://snag.gy/l5pzjR.jpg'],
+      github: 'https://github.com/preethamvishy/Cafenaut',
+      live: 'https://preethamvishy.github.io/Cafenaut/index.html',
+      description: 'A fully responsive static website made with HTML and CSS for an imaginary cafe. ☕️',
+      tech: ['HTML', 'CSS']
+    },
+    {
+      title: 'Instalytics',
+      image: 'https://camo.githubusercontent.com/ee0b9aabfb0af29f60868f8eb35013fdbf8ff937/68747470733a2f2f692e696d6775722e636f6d2f675147457a754e2e6a7067',
+      github: 'https://github.com/preethamvishy/instalytics',
+      live: 'https://www.npmjs.com/package/instalytics',
+      description: `Instagram analytics as an open-source project dependency (limited due to change in Instagram's public Graph API).`,
+      tech: ['Node.js', 'npm']
     },
   ];
 

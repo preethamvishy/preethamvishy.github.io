@@ -10,6 +10,7 @@ $white: #EDEDED;
 
 .home-wrapper {
     background-color: $fuschia;
+    padding-top: 2.5em;
 }
 img {
     padding: 10px;
@@ -24,6 +25,7 @@ img {
     margin: 5px;
     // font-family: 'Roboto', sans-serif;
     font-family: 'Exo 2', sans-serif;
+    border-radius: 2rem;
 }
 
 .btn i {
@@ -47,6 +49,15 @@ img:hover {
 }
 
 @media (min-width: 34em) {
+    .card-columns {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        column-gap: 10px;
+    }
+}
+
+@media (min-width: 48em) {
     .card-columns {
         -webkit-column-count: 2;
         -moz-column-count: 2;

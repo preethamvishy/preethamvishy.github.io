@@ -6,13 +6,36 @@ $onyx: #373449;
 $rosegold: #CE8C91;
 $fuschia: #A24868;
 $white: #EDEDED;
+$dark: rgb(50, 55, 62);
+$offwhite: rgb(230, 230, 230);
 @import url('https://fonts.googleapis.com/css?family=Exo+2:100|Roboto:100');
 
 
 section {
     min-height: 100vh;
     min-width: 100vw;
-    background: rgb(50, 55, 62);
+    background: $dark;
+}
+.navbar {
+    background-color: $offwhite;
+    font-family: 'Roboto', sans-serif;
+    a {
+        text-decoration: none;
+        color: $dark;
+        border-radius: 2.5em;
+        padding: 1em;
+        margin: 0.5em;
+        
+
+        &:hover {
+            background-color: $fuschia;
+            color: $offwhite;
+        }
+    }
+    .active {
+        background-color: $fuschia;
+        color: $offwhite;
+    }
 }
 .jumbotron {
     display: flex;
@@ -46,10 +69,10 @@ section {
     }
 }
 
-
 .container-fluid {   
     margin: 0  auto;
 }
+
 .intro-card {
     opacity: 0.85;
     border-radius: 50px 5px 50px 5px;
@@ -101,4 +124,10 @@ section {
   0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
   50%  { opacity: 1;  }
   100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+
+footer {
+    p {
+        margin-bottom: 0;
+    }
 }

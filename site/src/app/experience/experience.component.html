@@ -2,7 +2,7 @@
     <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
         <span class="display-4 text-header" style="font-family: 'Exo 2', sans-serif;">Experience</span>
     </div>
-    <mgl-timeline [toggle]="toggle" [alternate]="alternate" [side]="side">
+    <mgl-timeline [toggle]="toggle" [alternate]="alternate">
         <mgl-timeline-entry *ngFor="let item of items; let i = index;">
             <mgl-timeline-entry-header class="justify-content-between align-items-center">
                 <div [innerHTML]="getText(item.header)"></div>
