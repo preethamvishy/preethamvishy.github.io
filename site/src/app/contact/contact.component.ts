@@ -12,37 +12,37 @@ declare var $;
 })
 
 export class ContactComponent implements OnInit {
+
+  name;
   contact = new FormGroup({
     name: new FormControl('', Validators.required),
-    email: new FormControl('', [ Validators.required, Validators.email ]),
+    email: new FormControl('', [Validators.required, Validators.email]),
     subject: new FormControl('', Validators.required),
     message: new FormControl('', Validators.required),
   });
 
-  name;
   constructor(private _http: HttpClient) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   submit() {
     this._http.post('https://usebasin.com/f/84bb7fc19410.json', this.contact.value)
-    .subscribe(res => {
-      if(res['success']) {
-        $('#success').modal('toggle')
-        this.name = this.contact.value.name;
-        this.contact = new FormGroup({
-          name: new FormControl('', Validators.required),
-          email: new FormControl('', [ Validators.required, Validators.email ]),
-          subject: new FormControl('', Validators.required),
-          message: new FormControl('', Validators.required),
-        });
-  
-      }
-      else 
-        $('#retry').modal('toggle')
+      .subscribe(res => {
+        if (res['success']) {
+          $('#success').modal('toggle')
+          this.name = this.contact.value.name;
+          this.contact = new FormGroup({
+            name: new FormControl('', Validators.required),
+            email: new FormControl('', [Validators.required, Validators.email]),
+            subject: new FormControl('', Validators.required),
+            message: new FormControl('', Validators.required),
+          });
 
-    })
+        }
+        else
+          $('#retry').modal('toggle')
+
+      })
   }
 
 }
