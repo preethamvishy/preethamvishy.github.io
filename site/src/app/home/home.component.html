@@ -13,11 +13,17 @@
                         </span>
                         <div class="btn-group">
                             <button type="button" class="btn btn-sm btn-outline-secondary"
-                                [disabled]="item.github == null" (click)="navigate(item.github)"><small>Code<i
-                                        class="fab fa-github"></i></small></button>
+                                [disabled]="item.github == null && item.bitbucket == null" (click)="navigateToCode(item)">
+                                <small>
+                                    Code
+                                    <i *ngIf="item.github != null && item.github != undefined" class="fab fa-github"></i>
+                                    <i *ngIf="item.bitbucket != null && item.bitbucket != undefined" class="fab fa-bitbucket"></i>
+                                </small>
+                            </button>
                             <button type="button" class="btn btn-sm btn-outline-secondary"
-                                [disabled]="item.live == null" (click)="navigate(item.live)"><small>Live<i
-                                        class="fas fa-angle-right"></i></small></button>
+                                [disabled]="item.live == null" (click)="navigate(item.live)">
+                                <small>Live<i class="fas fa-angle-right"></i></small>
+                            </button>
                         </div>
                     </div>
                     <img *ngIf="item.image != null" (click)="toggleModal(item)" class="card-img-top" [src]="item.image">
@@ -48,7 +54,7 @@
                     </div>
 
                     <div class="card-body">
-                        <p class="card-text">{{item.description}}</p>
+                        <p class="card-text" [innerHTML]="item.description"></p>
                     </div>
                     <div class="card-footer">
                         <button *ngFor="let t of item.tech" type="button" class="btn"

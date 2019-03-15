@@ -25,6 +25,10 @@ export class HomeComponent implements OnInit {
     window.open(url, "_blank");
   }
 
+  navigateToCode(item) {
+    item.github == null || item.github == undefined ? window.open(item.bitbucket, "_blank") : window.open(item.github, "_blank");
+  }
+
   camelize(str) {
     return _.camelCase(str)
   }
@@ -40,5 +44,7 @@ export class HomeComponent implements OnInit {
     this.expandPost = item;
     $("#postExpand").modal("toggle");
   }
+
+  
 }
 

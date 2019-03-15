@@ -1,0 +1,20 @@
+<div class="container-fluid skills-wrapper">
+    <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <span class="display-4 text-header" style="font-family: 'Exo 2', sans-serif;">Skills</span>
+    </div>
+
+    <table class="table container">
+        <tbody>
+            <tr *ngFor="let key of keys(skills)">
+                <th>{{key}}</th>
+                <td>
+                    <button *ngFor="let t of skills[key]" type="button" class="btn" disabled
+                        [ngClass]="selected[camelize(t)] ? 'btn-success': 'btn-outline-secondary'"
+                        (click)="tag(camelize(t))">
+                        {{t}}
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

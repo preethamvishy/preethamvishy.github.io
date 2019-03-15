@@ -15,6 +15,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MglTimelineModule } from 'angular-mgl-timeline';
 import { ContactComponent } from './contact/contact.component';
+import { SkillsComponent } from './skills/skills.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { ContactComponent } from './contact/contact.component';
     HomeComponent,
     ExperienceComponent,
     ContactComponent,
+    SkillsComponent,
   ],
   imports: [
     BrowserModule,

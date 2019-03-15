@@ -1,0 +1,49 @@
+
+$coral: #FF7A6C;
+$yellow: #FFDC7B;
+$gray: #84828E;
+$onyx: #373449;
+$rosegold: #ce8c91;
+$fuschia: #A24868;
+$white: #EDEDED;
+$dark: rgb(50, 55, 62);
+$offwhite: rgb(230, 230, 230);
+
+@import url('https://fonts.googleapis.com/css?family=Exo+2:100|Roboto:100');
+
+* {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 1000;
+    color: $offwhite;
+}
+.text-header {
+    color: $fuschia;
+}
+
+.skills-wrapper {
+    background-color: $dark;
+    padding-top: 2.5em;
+    padding-bottom: 2em;
+}
+
+.btn[disabled] {
+    font-size: 0.8rem;
+    margin: 0 5px 10px 5px;
+    font-family: 'Exo 2', sans-serif;
+    border-radius: 2rem;
+    color: $offwhite;
+    opacity: 1;
+}
+
+td, th {
+    border: none;
+}
+
+th {
+    text-transform: uppercase;
+}
+
+table {
+    opacity: 0.8;
+    max-width: 50%;
+}
