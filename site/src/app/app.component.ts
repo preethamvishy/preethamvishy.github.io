@@ -29,8 +29,6 @@ export class AppComponent implements OnInit {
     }
   }
   ngOnInit() {
-    this.particleStyle = masterData.particleStyle;
-    this.particleParams = masterData.particleParams;
   }
 
   ngAfterViewInit() {

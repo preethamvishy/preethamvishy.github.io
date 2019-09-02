@@ -48,7 +48,7 @@ export class ExperienceComponent {
       •	Spearheaded the design and implementation using Java Swing by utilizing singleton and factory design patterns<br/>
       •	Employed multi-threading to geo-locate enterprises, dispatch customized emails and generate visual reports<br/>
       <br/>
-      <b>Live Twitter Sentiment Analyzer</b>  |  Angular, Node.js, Express.js<br/>
+      <b>Live Cognitive Twitter Tone Visualizer</b>  |  Angular, Node.js, Express.js<br/>
       •	Developed a live cognitive twitter tone analyzer using Angular, Node.js and Twitter Streaming API<br/>
       •	Leveraged IBM Watson Tone Analyzer for natural language processing and WebSocket for live communication between the back end and the front end<br/>
       <br/>

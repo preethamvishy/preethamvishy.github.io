@@ -45,7 +45,7 @@ var masterData = {
       image: 'https://snag.gy/Bz5IC2.jpg',
       github: 'https://github.com/preethamvishy/live-twitter-sentiment',
       live: 'https://live-twitter-sentiment.herokuapp.com/',
-      description: 'A live searchable twitter sentiment & tone analyzer using Web Sockets, Twitter Streaming API, Angular, Node.js and IBM Watson Tone Analyzer for NLP.',
+      description: 'A live, searchable cognitive twitter sentiment analyzer using Web Sockets, Twitter Streaming API, Angular, Node.js. Leverages IBM Watson Tone Analyzer for Natural Language Processing.',
       tech: ['Angular', 'Node.js', 'Bootstrap', 'HTML', 'CSS', 'Web Sockets', 'Twitter API', 'JSON', 'Heroku', 'Responsive', 'Socket.io', 'IBM Watson Tone Analyzer']
     },
     {
@@ -92,130 +92,16 @@ var masterData = {
     },
   ],
   skills: {
-    'Programming languages':	['Java', 'Typescript', 'Python', 'UNIX shell script', 'Objective C'],
-    'Web technologies':	['HTML5', 'JavaScript', 'CSS', 'REST'],
-    'Frameworks':	['Angular', 'Node.js', 'Bootstrap', 'Express.js', 'jQuery', 'Swing', 'Selenium', 'Cocoa'],
-    'Databases':	['MySQL', 'Oracle', 'MongoDB'],
-    'DevOps technologies':	['Vagrant', 'Ansible', 'Docker'],
-    'Cloud technologies':	['Amazon Web Services (AWS)', 'Heroku', 'IBM Watson Tone Analyzer'],
-    'Operating systems':	['MacOS', 'Windows'],
-    'Other':	['Jira', 'Confluence', 'Slack', 'Adobe Photoshop CS6 / CC 2018'],
+    'Programming Languages':	['Java', 'Typescript', 'Python', 'UNIX Shell Scripting'],
+    'Web Technologies':	['HTML5', 'JavaScript (ES6)', 'CSS', 'Sass'],
+    'Frameworks':	['Angular', 'Node.js', 'Bootstrap', 'Express.js', 'jQuery', 'Selenium'],
+    'Databases':	['MySQL', 'MongoDB', 'SQLite'],
+    'Cloud Technologies':	['Amazon Web Services (AWS)', 'Heroku', 'IBM Watson Tone Analyzer'],
+    'DevOps Technologies':	['Vagrant', 'Ansible', 'Docker'],
+    'Tools & Others':	['Adobe Photoshop CS6 / CC 2018', 'Confluence', 'Jira', 'Postman'],
+    'Operating Systems':	['MacOS', 'Windows'],
   },
 
-  particleStyle: {
-    'position': 'absolute',
-    'width': '100%',
-    'height': '100%',
-    'z-index': 0,
-    'top': 0,
-    'left': 0,
-    'right': 0,
-    'bottom': 0,
-  },
-  particleParams: {
-    "particles": {
-      "number": {
-        "value": 40,
-        "density": {
-          "enable": true,
-          "value_area": 250
-        }
-      },
-      "color": {
-        "value": ["#aa73ff", "#33b1f8"]
-      },
-      "shape": {
-        "type": "triangle",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
-        },
-        "polygon": {
-          "nb_sides": 15
-        }
-      },
-      "opacity": {
-        "value": 0.5,
-        "random": false,
-        "anim": {
-          "enable": false,
-          "speed": 1.5,
-          "opacity_min": 0.15,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 2.5,
-        "random": false,
-        "anim": {
-          "enable": true,
-          "speed": 2,
-          "size_min": 0.15,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": true,
-        "distance": 110,
-        "color": "#33b1f8",
-        "opacity": 0.25,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 1.6,
-        "direction": "none",
-        "random": false,
-        "straight": false,
-        "out_mode": "out",
-        "bounce": false,
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": false,
-          "mode": "repulse"
-        },
-        "onclick": {
-          "enable": false,
-          "mode": "push"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 400,
-          "line_linked": {
-            "opacity": 1
-          }
-        },
-        "bubble": {
-          "distance": 400,
-          "size": 40,
-          "duration": 2,
-          "opacity": 8,
-          "speed": 3
-        },
-        "repulse": {
-          "distance": 200,
-          "duration": 0.4
-        },
-        "push": {
-          "particles_nb": 4
-        },
-        "remove": {
-          "particles_nb": 2
-        }
-      }
-    }
-  }
 };
 
 export default masterData;
