@@ -1,5 +1,5 @@
 <body data-spy="scroll" data-target="#stickyNav" data-offset="0">
-    <section id="home" class="jumbotron text-center h-100">
+    <section id="home" fragment="home" class="jumbotron text-center h-100">
         <div class="container-fluid h-100">
             <div class="row-fluid d-flex justify-content-center align-items-center h-100">
                 <div class="card col-lg-4 col-md-8 col-xs-8 intro-card shadow-lg">
@@ -11,11 +11,14 @@
                         </div>
                     </div>
                     <p class="lead text-muted">
-                        I'm a candidate for Master of Science at Northeastern Univerisity. I'm a software engineering
-                        and
-                        web
-                        development enthusiast looking to positively influence the
-                        world.
+                        I'm a software engineering
+                        and web development enthusiast who loves the challenge of solving real world problems, learning
+                        new technologies, and pushing the envelope on building creative and scalable solutions. The
+                        dream is to positively influence the world, one line of maintainable code at a time.
+                        <br />
+                        Currently
+                        pursuing a Master of Science at Northeastern University and contributing to open source
+                        when possible.
                     </p>
                     <p class="links">
                         <a [href]="github" class="text-secondary"><i class="fab fa-github"></i></a>
@@ -26,21 +29,21 @@
             </div>
         </div>
     </section>
-    <particles style="opacity: 0.5" [params]="particleParams" [style]="particleStyle" [width]="width" [height]="height">
-    </particles>
+    <!-- <particles style="opacity: 0.5" [params]="particleParams" [style]="particleStyle" [width]="width" [height]="height">
+    </particles> -->
     <div class="scroll-indicator"></div>
     <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#stickyNav"
+        <button id="navbar-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#stickyNav"
             aria-controls="stickyNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="stickyNav">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="#home">HOME</a>
-                <a class="nav-item nav-link" href="#projects">PROJECTS</a>
-                <a class="nav-item nav-link" href="#skills">SKILLS</a>
-                <a class="nav-item nav-link" href="#experience">EXPERIENCE</a>
-                <a class="nav-item nav-link" href="#contact">GET IN TOUCH</a>
+                <a class="nav-item nav-link" (click)="goTo('home')">HOME</a>
+                <a class="nav-item nav-link" (click)="goTo('projects')">PROJECTS</a>
+                <a class="nav-item nav-link" (click)="goTo('skills')">SKILLS</a>
+                <a class="nav-item nav-link" (click)="goTo('experience')">EXPERIENCE</a>
+                <a class="nav-item nav-link" (click)="goTo('contact')">GET IN TOUCH</a>
             </div>
         </div>
     </nav>

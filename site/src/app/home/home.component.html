@@ -26,7 +26,8 @@
                             </button>
                         </div>
                     </div>
-                    <img *ngIf="item.image != null" (click)="toggleModal(item)" class="card-img-top" [src]="item.image">
+                    <img *ngIf="item.image != null && !item.image.includes('linkedin')" (click)="toggleModal(item)" class="card-img-top" [src]="item.image">
+                    <iframe *ngIf="item.image != null && item.image.includes('linkedin')" [src]="sanitizer.bypassSecurityTrustResourceUrl(item.image)" frameborder="0" allowfullscreen="" title="Flock video" class="card-img-top"></iframe>
                     <div *ngIf="item.image != null" class="w-100">
                         <hr class="col-4" />
                     </div>
@@ -103,12 +104,18 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal"
-                        [disabled]="expandPost.github == null" (click)="navigate(expandPost.github)">View
-                        Code</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary" [disabled]="expandPost.live == null"
-                        (click)="navigate(expandPost.live)">View Live
-                        Website</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                        [disabled]="expandPost.github == null && itexpandPostem.bitbucket == null" (click)="navigateToCode(expandPost)">
+                        <small>
+                            Code
+                            <i *ngIf="expandPost.github != null && expandPost.github != undefined" class="fab fa-github"></i>
+                            <i *ngIf="expandPost.bitbucket != null && expandPost.bitbucket != undefined" class="fab fa-bitbucket"></i>
+                        </small>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" [disabled]="expandPost.live == null || expandPost.live.length <= 5"
+                        (click)="navigate(expandPost.live)">
+                        <small>View Live Website</small>
+                    </button>
                 </div>
             </div>
         </ng-container>

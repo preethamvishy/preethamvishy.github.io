@@ -1,11 +1,10 @@
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
-import { ExperienceComponent } from './experience/experience.component';
+import { AppComponent } from './app.component';
 
 const appRoutes: Routes = [
-    { path: '', component: HomeComponent },
-    { path: '', component: ExperienceComponent },
+    { path: '', component: AppComponent },
     { path: '**', redirectTo: '' }
 ];
 

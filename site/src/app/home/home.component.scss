@@ -3,13 +3,14 @@ $yellow: #FFDC7B;
 $gray: #84828E;
 $onyx: #373449;
 $rosegold: #CE8C91;
-$fuschia: #A24868;
+$fuchsia: #A24868;
 $white: #EDEDED;
 @import url('https://fonts.googleapis.com/css?family=Exo+2:100|Roboto:100');
 
 .home-wrapper {
-    background-color: $fuschia;
-    padding-top: 2.5em;
+    background-color: $fuchsia;
+    padding-top: 4em;
+    padding-bottom: 2em;
 }
 img {
     padding: 10px;
@@ -22,7 +23,6 @@ img {
 .card-footer .btn {
     font-size: 0.8rem;
     margin: 5px;
-    // font-family: 'Roboto', sans-serif;
     font-family: 'Exo 2', sans-serif;
     border-radius: 2rem;
 }

@@ -14,8 +14,7 @@ export class ExperienceComponent {
   size: number = 40;
   expandEnabled: boolean = true;
 
-  constructor(private sanitizer:DomSanitizer)
-  {}
+  constructor(private sanitizer:DomSanitizer) {}
 
   items = [
     {
@@ -39,6 +38,11 @@ export class ExperienceComponent {
     {
       header: 'Northeastern University - Master of Science in Information Systems - Sep 2018 to May 2020 (Expected)',
       content: `
+      <b>Flock</b>  |  Angular, Node.js, MongoDB, Bootstrap, HTML, CSS<br/>
+      •	Designed and developed a fully responsive web application for vacation home rentals<br/>
+      •	Employed authentication strategies to control front-end user accesses and to secure API routes<br/>
+      •	Implemented efficient backend using Node.js and MongoDB<br/>
+      <br/>
       <b>Personal health informatics system with quick medical emergency response</b>  |  Java, Swing<br/>
       •	Engineered an ecosystem model-based solution to track personal health information and when required, automatically alert emergency services and manage hospital transfers<br/>
       •	Spearheaded the design and implementation using Java Swing by utilizing singleton and factory design patterns<br/>
@@ -48,7 +52,10 @@ export class ExperienceComponent {
       •	Developed a live cognitive twitter tone analyzer using Angular, Node.js and Twitter Streaming API<br/>
       •	Leveraged IBM Watson Tone Analyzer for natural language processing and WebSocket for live communication between the back end and the front end<br/>
       <br/>
-
+      <b>Social Media Influencer Marketing Agency</b>  |  MySQL<br/>
+      •	Charted an elaborate database for an automated social media influencer marketing agency<br/>
+      •	Executed complex queries, joins, stored procedures and triggers to ensure smooth transactions<br/>
+      <br/>
       `
     }
     

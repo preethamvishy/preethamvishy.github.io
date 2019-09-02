@@ -4,7 +4,7 @@ $yellow: #FFDC7B;
 $gray: #84828E;
 $onyx: #373449;
 $rosegold: #CE8C91;
-$fuschia: #A24868;
+$fuchsia: #A24868;
 $white: #EDEDED;
 $dark: rgb(50, 55, 62);
 $offwhite: rgb(230, 230, 230);
@@ -25,15 +25,16 @@ section {
         border-radius: 2.5em;
         padding: 1em;
         margin: 0.5em;
+        cursor: pointer;
         
 
         &:hover {
-            background-color: $fuschia;
+            background-color: $fuchsia;
             color: $offwhite;
         }
     }
     .active {
-        background-color: $fuschia;
+        background-color: $fuchsia;
         color: $offwhite;
     }
 }
@@ -81,7 +82,7 @@ section {
     .intro-header {
         border-radius: 50px 5px 50px 5px;
         transform: translate(0, -50px);
-        background: $fuschia;
+        background: $fuchsia;
         color: white;
         outline: none;
         border: none;

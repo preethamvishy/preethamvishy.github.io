@@ -4,7 +4,7 @@ $yellow: #FFDC7B;
 $gray: #84828E;
 $onyx: #373449;
 $rosegold: #ce8c91;
-$fuschia: #A24868;
+$fuchsia: #A24868;
 $white: #EDEDED;
 $dark: rgb(50, 55, 62);
 $offwhite: rgb(230, 230, 230);
@@ -17,13 +17,12 @@ $offwhite: rgb(230, 230, 230);
     color: $offwhite;
 }
 .text-header {
-    color: $fuschia;
+    color: $fuchsia;
 }
 
 .skills-wrapper {
     background-color: $dark;
-    padding-top: 2.5em;
-    padding-bottom: 2em;
+    padding-top: 5em;
 }
 
 .btn[disabled] {

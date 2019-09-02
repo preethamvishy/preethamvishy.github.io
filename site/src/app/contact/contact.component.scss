@@ -4,7 +4,7 @@ $yellow: #FFDC7B;
 $gray: #84828E;
 $onyx: #373449;
 $rosegold: #ce8c91;
-$fuschia: #A24868;
+$fuchsia: #A24868;
 $white: #EDEDED;
 @import url('https://fonts.googleapis.com/css?family=Exo+2:100|Roboto:100');
 
@@ -12,9 +12,11 @@ $white: #EDEDED;
     font-family: 'Exo 2', sans-serif;
     font-weight: 1000;
 }
-
+.wrapper {
+    padding-top: 5em;
+}
 .text-header {
-    color: $fuschia;
+    color: $fuchsia;
     margin: 2rem;
 }
 
@@ -25,6 +27,7 @@ $white: #EDEDED;
 .card {
     margin: 2rem;
     padding: 1rem;
+    padding-top: 2.5em;
 }
 
 #contact input[type="text"],
@@ -32,9 +35,7 @@ $white: #EDEDED;
 #contact textarea {
 	width: 100%;
     border :1px solid #CCC;
-    // border-radius: 5px;
 	background: #FFF;
-	// margin: 0 0 10px;
 	padding: 10px;
 }
 
@@ -49,10 +50,9 @@ $white: #EDEDED;
     width:calc(100%);
     border:none;
     outline: none;
-    background: $fuschia;
+    background: $fuchsia;
     border-radius: 4px;
 	color:#FFF;
-	// margin:0 0 5px;
 	padding:10px;
 	font-size:15px;
 }
@@ -62,7 +62,7 @@ $white: #EDEDED;
 select:focus {
     transition: 0.4s;
 	outline:0;
-	border:1px solid $fuschia;
+	border:1px solid $fuchsia;
 }
 
 #contact button:focus {
