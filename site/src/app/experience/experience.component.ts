@@ -28,19 +28,21 @@ export class ExperienceComponent {
     {
       header: 'Infosys Limited - Systems Engineer - Jul 2016 to Aug 2018',
       content: `
-      <b>Worked as a Full Stack Developer with a major focus on front-end development using Angular for a Fortune 10 American multinational technology company</b><br/>
-      •	Developed feature-rich web user interfaces collaboratively to manage and monitor the client’s extensive ecosystem of applications, services, and hosts<br/>
+      <b>Engaged as a Full Stack Developer with a major focus on front-end development using Angular for a Fortune 10 American multinational technology company</b><br/>
+      •	Developed feature-rich web user interfaces to manage and monitor the client’s extensive ecosystem of applications, services, and hosts<br/>
+      •		Led the front-end development of an internal application to monitor live/historic health of 1000+ hosts across 6+ environments, run test suites on sets of hosts, and commission/decommission hosts as required<br/>
       •	Redesigned and implemented existing UI to optimize user experience, improve deployments and generate reports<br/>
-      •	Independently developed utilities to drive innovation and streamline workflows in addition to role responsibilities<br/>
-      •	Facilitated an estimated cost saving of $12,600 annually by building a utility to automate a bi-monthly task<br/>
+      •	Ideated and developed utilities to drive innovation and streamline team workflows<br/>
+      •	Facilitated an estimated cost saving of $14,700 annually by building a utility to automate a bi-monthly task<br/>
       `
     },
     {
       header: 'Northeastern University - Master of Science in Information Systems - Sep 2018 to May 2020 (Expected)',
       content: `
       <b>Flock</b>  |  Angular, Node.js, MongoDB, Bootstrap, HTML, CSS<br/>
-      •	Designed and developed a fully responsive web application for vacation home rentals<br/>
-      •	Employed authentication strategies to control front-end user accesses and to secure API routes<br/>
+      •	Designed and developed a responsive, full-stack application for vacation home rentals using MEAN stack and AWS<br/>
+      •	Incorporated login and sign-up flows using platform-independent Facial Recognition for a unique user experience
+      •	Applied authentication strategies for role-based front-end accesses and used JWT to secure API endpoints<br/>
       •	Implemented efficient backend using Node.js and MongoDB<br/>
       <br/>
       <b>Personal health informatics system with quick medical emergency response</b>  |  Java, Swing<br/>

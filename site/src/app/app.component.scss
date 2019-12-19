@@ -14,8 +14,12 @@ $offwhite: rgb(230, 230, 230);
 section {
     min-height: 100vh;
     min-width: 100vw;
-    background: $dark;
+    background: $dark url('../assets/bg.jpeg') center center;
+    background-size: cover;
+    position: relative;
+    border-radius: 0;
 }
+
 .navbar {
     background-color: $offwhite;
     font-family: 'Roboto', sans-serif;
@@ -38,15 +42,18 @@ section {
         color: $offwhite;
     }
 }
+
 .jumbotron {
     display: flex;
     align-items: center;
     margin-bottom: 0px;
 }
+
 .jumbotron-heading {
     font-family: 'Roboto', sans-serif;
     // text-transform: uppercase;
 }
+
 .text-muted {
     font-family: 'Exo 2', sans-serif;
 }
@@ -75,7 +82,7 @@ section {
 }
 
 .intro-card {
-    opacity: 0.85;
+    opacity: 0.97;
     border-radius: 50px 5px 50px 5px;
     padding: 25px;
     z-index: 5;

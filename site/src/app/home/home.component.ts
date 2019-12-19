@@ -13,12 +13,14 @@ export class HomeComponent implements OnInit {
   
   expandPost;
   data;
+  featured;
   selected = {};
 
   constructor(private sanitizer: DomSanitizer) {}
   
   ngOnInit() {
     this.data = masterData.data;
+    this.featured = masterData.featured;
   }
 
   navigate(url) {

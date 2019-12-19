@@ -2,17 +2,16 @@
     <section id="home" fragment="home" class="jumbotron text-center h-100">
         <div class="container-fluid h-100">
             <div class="row-fluid d-flex justify-content-center align-items-center h-100">
-                <div class="card col-lg-4 col-md-8 col-xs-8 intro-card shadow-lg">
+                <div class="card col-lg-4 col-md-8 col-xs-8 intro-card shadow-lg ">
                     <div class="card-img-top">
                         <div class="card intro-header shadow-lg">
                             <div class="card-body">
-                                <h1 class="jumbotron-heading">Hi, I'm Preetham Viswanathan.</h1>
+                                <h1 class="jumbotron-heading">Hi! I'm Preetham Viswanathan.</h1>
                             </div>
                         </div>
                     </div>
                     <p class="lead text-muted">
-                        I'm a software engineering
-                        and web development enthusiast who loves the challenge of solving real world problems, learning
+                        I enjoy the challenge of solving real world problems, learning
                         new technologies, and pushing the envelope on building creative and scalable solutions. The
                         dream is to positively influence the world, one line of maintainable code at a time.
                         <br />
@@ -20,17 +19,16 @@
                         pursuing a Master of Science degree at Northeastern University and I contribute to open source
                         when possible.
                     </p>
-                    <p class="links">
+                    <div class="d-flex justify-content-around links">
                         <a [href]="github" class="text-secondary"><i class="fab fa-github"></i></a>
                         <a [href]="linkedIn" class="text-secondary"><i class="fab fa-linkedin"></i></a>
                         <a [href]="npm" class="text-secondary"><i class="fab fa-npm"></i></a>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- <particles style="opacity: 0.5" [params]="particleParams" [style]="particleStyle" [width]="width" [height]="height">
-    </particles> -->
+
     <div class="scroll-indicator"></div>
     <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow">
         <button id="navbar-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#stickyNav"
@@ -52,12 +50,17 @@
     <app-experience id="experience"></app-experience>
     <app-contact id="contact"></app-contact>
 </body>
+
 <footer class="footer bg-dark">
-    <div class="container-fluid text-center">
-        <p class="links">
-            <a [href]="github" class="text-secondary"><i class="fab fa-github"></i></a>
-            <a [href]="linkedIn" class="text-secondary"><i class="fab fa-linkedin"></i></a>
-            <a [href]="npm" class="text-secondary"><i class="fab fa-npm"></i></a>
-        </p>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <div class="d-flex justify-content-around links">
+                    <a [href]="github" class="text-secondary"><i class="fab fa-github"></i></a>
+                    <a [href]="linkedIn" class="text-secondary"><i class="fab fa-linkedin"></i></a>
+                    <a [href]="npm" class="text-secondary"><i class="fab fa-npm"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
 </footer>
