@@ -10,10 +10,10 @@ var masterData = {
     },
     {
       title: 'Socialytics',
-      image: 'https://snag.gy/SNGiCc.jpg',
+      images: ['https://snipboard.io/Ot6aVN.jpg', 'https://snipboard.io/ENy8u4.jpg', 'https://snipboard.io/xUC1WJ.jpg'],
       github: 'https://github.com/preethamvishy/socialytics',
       live: 'https://preethamvishy.github.io/socialytics/instagram?user=instagram',
-      description: `Quick, actionable Instagram analytics in under 10 seconds using Instagram's public data.  🚀`,
+      description: `Quick, actionable Instagram analytics in under 10 seconds using Instagram's public data and GraphQL endpoints.  🚀`,
       tech: ['Angular', 'Node.js', 'Bootstrap', 'HTML', 'CSS', 'jQuery', 'JSON', 'Responsive']
     },
     {
@@ -21,7 +21,7 @@ var masterData = {
       image: 'https://camo.githubusercontent.com/b4623c1474231db8931288bc2c8347d74939992b/68747470733a2f2f692e696d6775722e636f6d2f324b455747764b2e706e67',
       github: 'https://github.com/preethamvishy/try',
       live: 'https://npmjs.com/package/try-cli',
-      description: 'A command line tool to attempt execution of a shell command and retry on schedule until it succeeds. Optionally, repeat the execution on schedule even if it succeeds ⌛️',
+      description: 'A command line tool (available via npm) to attempt execution of a shell command and retry on schedule until it succeeds. Optionally, repeat the execution on schedule even if it succeeds ⌛️',
       tech: ['Node.js', 'CLI', 'npm']
     },
     {

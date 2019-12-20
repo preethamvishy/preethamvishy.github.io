@@ -35,13 +35,25 @@ export class AppComponent implements OnInit {
   }
 
   goTo(str) {
-    // window.location.hash = '';
-    // window.location.hash = str;
-    document.getElementById(str).scrollIntoView({ behavior: "smooth", block: 'start'  });
     const el = document.getElementById('navbar-toggler')
     if (el.getAttribute('aria-expanded') == 'true') {
       el.click();
     }
+    if (window.innerWidth < 992) {
+      this.scrollToView(document.getElementById(str), -350)
+    } else {
+      document.getElementById(str).scrollIntoView({ behavior: "smooth", block: 'start' });
+    }
+  }
+
+  scrollToView = (element, offset) => {
+    const yCoordinate = element.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = offset;
+
+    window.scrollTo({
+      top: yCoordinate + yOffset,
+      behavior: 'smooth'
+    });
   }
 
 }
