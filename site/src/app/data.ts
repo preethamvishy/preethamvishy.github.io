@@ -1,15 +1,23 @@
 var masterData = {
-  data: [
+  featured: [
+    {
+      title: 'Socialytics iOS',
+      images: ['../assets/profile.jpg', '../assets/home.jpg', '../assets/signup1.jpg', '../assets/searched.jpg', '../assets/expanded.jpg', '../assets/analytics.jpg'],
+      github: null,
+      live: null,
+      description: 'A responsive iOS application with custom UI elements to browse and analyze Instagram accounts. ⛺ ',
+      tech: ['iOS', 'Swift', 'Node.js', 'Express.js']
+    },
     {
       title: 'Flock',
       image: 'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6525893337457704960?compact=1',
       github: null,
       live: null,
-      description: 'A full-stack web application for home rentals with improved sign-up and login flow using Facial Recognition. ⛺ ',
+      description: 'A full-stack web application for home rentals with a fun UX by incorporating <strong>sign-up and login flow using Facial Recognition<strong>. ⛺ ',
       tech: ['Angular', 'Node.js', 'Bootstrap', 'HTML', 'CSS', 'JSON', 'Responsive', 'MongoDB', 'Express.js']
     },
     {
-      title: 'Socialytics',
+      title: 'Socialytics Web',
       images: ['https://snipboard.io/Ot6aVN.jpg', 'https://snipboard.io/ENy8u4.jpg', 'https://snipboard.io/xUC1WJ.jpg'],
       github: 'https://github.com/preethamvishy/socialytics',
       live: 'https://preethamvishy.github.io/socialytics/instagram?user=instagram',
@@ -25,20 +33,22 @@ var masterData = {
       tech: ['Node.js', 'CLI', 'npm']
     },
     {
+      title: 'Cafenaut',
+      images: ['https://snag.gy/rsnORK.jpg', 'https://snag.gy/l5pzjR.jpg'],
+      github: 'https://github.com/preethamvishy/Cafenaut',
+      live: 'https://preethamvishy.github.io/Cafenaut/index.html',
+      description: 'A fully responsive static website made with pure HTML and CSS. ☕️',
+      tech: ['HTML', 'CSS']
+    }
+  ],
+  data: [
+    {
       title: 'Porfolio',
       image: 'https://snag.gy/Fa4WiE.jpg',
       github: 'https://github.com/preethamvishy/preethamvishy.github.io',
       live: 'https://preethamvishy.github.io/',
       description: 'A platform to share my work with the world to augment enriching conversations, receive constructive feedback and engage in a synergy of learning experiences.',
       tech: ['Angular', 'Bootstrap', 'HTML', 'CSS', 'Responsive']
-    },
-    {
-      title: 'Cafenaut',
-      images: ['https://snag.gy/rsnORK.jpg', 'https://snag.gy/l5pzjR.jpg'],
-      github: 'https://github.com/preethamvishy/Cafenaut',
-      live: 'https://preethamvishy.github.io/Cafenaut/index.html',
-      description: 'A fully responsive static website made with HTML and CSS for an imaginary cafe. ☕️',
-      tech: ['HTML', 'CSS']
     },
     {
       title: 'Liver',
@@ -50,7 +60,7 @@ var masterData = {
     },
     {
       title: 'Instalytics',
-      image: 'https://camo.githubusercontent.com/ee0b9aabfb0af29f60868f8eb35013fdbf8ff937/68747470733a2f2f692e696d6775722e636f6d2f675147457a754e2e6a7067',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/1280px-Npm-logo.svg.png',
       github: 'https://github.com/preethamvishy/instalytics',
       live: 'https://www.npmjs.com/package/instalytics',
       description: `Instagram analytics as an open-source Node.js dependency (limited due to change in Instagram's public Graph API).`,
@@ -78,26 +88,14 @@ var masterData = {
       •	Leveraged Google Geocoding API to geo-locate enterprises and used these geo-locations to auto-assign nearest enterprise to patients.
       `,
       tech: ['Java', 'Swing', 'Db4o', 'Google Geocoding API']
-    },
-    {
-      title: 'Dash',
-      image: 'https://bytebucket.org/viswanathanp/viswanathan_preetham_001497217/raw/77da8648a4df3a3a57da25d18191a2798c82b196/Assignment1/Demo.gif?token=2aca0ac4fcb331a533835e574d3b3e40768665c1',
-      bitbucket: 'https://bitbucket.org/viswanathanp/viswanathan_preetham_001497217/src/master/Assignment1/',
-      github: null,
-      live: null,
-      description: `
-      A personal information dashboard built using Java and Swing.
-      `,
-      tech: ['Java', 'Swing']
-    },
+    }
   ],
   skills: {
-    'Programming Languages':	['Java', 'Typescript', 'Python', 'UNIX Shell Scripting'],
-    'Web Technologies':	['HTML5', 'JavaScript (ES6)', 'CSS', 'Sass'],
-    'Frameworks':	['Angular', 'Node.js', 'Bootstrap', 'Express.js', 'jQuery', 'Selenium'],
+    'Languages':	['JavaScript (ES6)', 'Java', 'Typescript', 'Swift', 'SQL', 'Python'],
+    'Web Technologies':	['Angular', 'HTML5', 'CSS', 'Sass', 'Node.js', 'Bootstrap', 'Express.js', 'jQuery'],
     'Databases':	['MySQL', 'MongoDB', 'SQLite'],
     'Cloud Technologies':	['Amazon Web Services (AWS)', 'Heroku', 'IBM Watson Tone Analyzer'],
-    'DevOps Technologies':	['Vagrant', 'Ansible', 'Docker'],
+    'DevOps Technologies':	['Vagrant', 'Docker'],
     'Tools & Others':	['Adobe Photoshop CS6 / CC 2018', 'Confluence', 'Jira', 'Postman'],
     'Operating Systems':	['MacOS', 'Windows'],
   },

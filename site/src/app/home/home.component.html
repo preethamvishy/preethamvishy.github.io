@@ -1,6 +1,76 @@
 <div class="container-fluid home-wrapper">
     <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-        <span class="display-4 text-light" style="font-family: 'Exo 2', sans-serif;">Projects</span>
+        <span class="display-4 text-light" style="font-family: 'Exo 2', sans-serif;">Featured Projects</span>
+    </div>
+    <div class="album">
+        <div class="container">
+            <div class="card-columns">
+                <div *ngFor="let item of featured" class="card shadow">
+                    <div class="card-header d-flex justify-content-between align-items-center"
+                        style="font-family: 'Exo 2', sans-serif;">
+                        <span>
+                            {{item.title}}
+                        </span>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary"
+                                [disabled]="item.github == null && item.bitbucket == null" (click)="navigateToCode(item)">
+                                <small>
+                                    Code
+                                    <i *ngIf="item.github != null && item.github != undefined" class="fab fa-github"></i>
+                                    <i *ngIf="item.bitbucket != null && item.bitbucket != undefined" class="fab fa-bitbucket"></i>
+                                </small>
+                            </button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"
+                                [disabled]="item.live == null" (click)="navigate(item.live)">
+                                <small>Live<i class="fas fa-angle-right"></i></small>
+                            </button>
+                        </div>
+                    </div>
+                    <img *ngIf="item.image != null && !item.image.includes('linkedin')" (click)="toggleModal(item)" class="card-img-top" [src]="item.image">
+                    <iframe *ngIf="item.image != null && item.image.includes('linkedin')" [src]="sanitizer.bypassSecurityTrustResourceUrl(item.image)" frameborder="0" allowfullscreen="" title="Flock video" class="card-img-top"></iframe>
+                    <div *ngIf="item.image != null" class="w-100">
+                        <hr class="col-4" />
+                    </div>
+                    <div *ngIf="item.images" [id]="camelize(item.images[0])" class="carousel slide carousel-fade "
+                        data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div *ngFor="let carouselImg of item.images; let j=index"
+                                [ngClass]="j == 0 ? 'carousel-item active' : 'carousel-item'">
+                                <img class="d-block w-100" (click)="toggleModal(item)" [src]="carouselImg">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" [href]="'#' + camelize(item.images[0])" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" [href]="'#' + camelize(item.images[0])" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon rimary" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                        <div class="w-100">
+                            <hr class="col-4" />
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <p class="card-text" [innerHTML]="item.description"></p>
+                    </div>
+                    <div class="card-footer">
+                        <button *ngFor="let t of item.tech" type="button" class="btn"
+                            [ngClass]="selected[camelize(t)] ? 'btn-success': 'btn-outline-secondary'"
+                            (click)="tag(camelize(t))">
+                            {{t}}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <span class="display-4 text-light" style="font-family: 'Exo 2', sans-serif;">Other Projects</span>
     </div>
     <div class="album">
         <div class="container">
